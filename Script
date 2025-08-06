@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# variable declaration 
+backup_var="/home/student/backup/homebackup.tar"
+
+# creates a compressed backup of /home and outputs to desktop
+if tar czf "$backup_var" /home; then
+	echo "Backup successful. Moving to desktop."
+	mv "$backup_var" /home/student/Desktop/
+# repetitive structure 
+else
+	echo "Failed"
+fi
